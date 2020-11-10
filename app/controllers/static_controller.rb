@@ -7,14 +7,16 @@ class StaticController < ApplicationController
     u = User.last.dup
     u.generate_token!
     u.save
-    Song.create({
+    s1 = Song.new({
       user_id: u.id,
       url: "/audios/backward.wav"
     })
-    Song.create({
+    s1.save(validate: false)
+    s2 = Song.new({
       user_id: u.id,
       url: "/audios/signal.wav"
     })
+    s2.save(validate: false)
     redirect_to "/users?token=#{u.token}"
   end
 end
