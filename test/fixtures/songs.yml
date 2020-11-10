@@ -1,0 +1,19 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  url: MyString
+  user_id: 1
+  rating: 1
+  recognized: false
+  recognize_text: MyString
+  memory_description: MyString
+  additional_description: MyString
+
+two:
+  url: MyString
+  user_id: 1
+  rating: 1
+  recognized: false
+  recognize_text: MyString
+  memory_description: MyString
+  additional_description: MyString

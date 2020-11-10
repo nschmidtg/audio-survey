@@ -1,0 +1,20 @@
+<% ratio =  @compleated.to_f/@total*100 %>
+
+<div class="progress">
+  <div class="progress-bar" role="progressbar" style="width: <%=ratio%>%;" aria-valuenow="<%=ratio%>" aria-valuemin="0" aria-valuemax="100"><%= @compleated %> / <%= @total %></div>
+</div>
+<audio src=<%= @song.url %> controls></audio>
+
+<%= simple_form_for @song, url: song_path do |f| %>
+  <%= f.error_notification %>
+
+  <%= f.input :recognized, as: :radio_buttons %>
+  <%= f.input :recognize_text, as: :text %>
+  <%= f.input :rating, as: :radio_buttons, collection: Song::rating_strings %>
+  <%= f.input :memory_description, as: :text %>
+  <%= f.input :additional_description, as: :text %>
+  
+
+  <%= f.button :submit, class: "btn-primary" %>
+  <%= f.button :button, "Cancel", type: "reset", class: "btn-outline-secondary" %>
+<% end %>
