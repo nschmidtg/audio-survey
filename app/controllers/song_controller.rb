@@ -15,7 +15,6 @@ class SongController < ApplicationController
   end
 
   def update
-    puts params
     if @song.update_attributes(params_song)
       @song.update_attribute(:compleated, true)
       flash[:notice] = 'Imagen acutalizada'
