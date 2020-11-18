@@ -15,10 +15,11 @@ c = Aws::S3::Client.new(
 )
 
 songs_count = 0
-
+users = []
 c.list_objects_v2(bucket: 'audio-survey').contents.select{ |x| x.size > 0}.each do |x|
   email_obj = x.key.split("/")
   u = User.find_or_create_by(email: email_obj[0])
+  users << u
   s = Song.new()
   s.url = "https://audio-survey.s3.eu-west-3.amazonaws.com/#{x.key}"
   s.compleated = false
@@ -26,5 +27,7 @@ c.list_objects_v2(bucket: 'audio-survey').contents.select{ |x| x.size > 0}.each 
   s.save(validate: false)
   songs_count += 1
 end
-
+users.each do |u|
+  puts "#{u.email}, #{u.token}"
+end
 puts "songs created: #{songs_count}"
