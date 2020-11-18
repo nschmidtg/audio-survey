@@ -2,12 +2,19 @@ class UserController < ApplicationController
   before_action :authenticate
 
   def show
-    @hola = @current_user.email
+    @go = true
+    if @current_user.songs.where(compleated: false).count == 0
+      @email = "You have already responded the survey"
+      @go = false
+    else
+      @email = @current_user.email
+    end
   end
 
   private
 
   def authenticate
+    session[:current_user_token] = nil
     @current_user = User.find_by(token: params[:token])
     unless @current_user
       raise ActiveRecord::RecordNotFound
