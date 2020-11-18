@@ -1,24 +1,49 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Dependencies:
+* ruby 2.5.8
+* Rails 6.0.3.4
+* postgresql 13
 
-Things you may want to cover:
+## Install:
 
-* Ruby version
+After cloning the code a file called '.env.development' should be created in the root of the project with the AWS environment variables:
 
-* System dependencies
+```
+AWS_ACCESS_KEY_ID=...
+AWS_SECRET_ACCESS_KEY=...
+AWS_REGION=...
+```
 
-* Configuration
+rvm, ruby and ruby on rails installation:
+http://installfest.railsbridge.org/installfest/linux. 
 
-* Database creation
+Postgres:
 
-* Database initialization
+https://www.godaddy.com/garage/how-to-install-postgresql-on-ubuntu-14-04/
 
-* How to run the test suite
+> If you have problems: Habilitar Postgres para que cualquier usuario pueda modificar la DB. Buscar el archivo pg_hba.conf. en la carpeta de /postgres. Abrirlo con: sudo nano pg_hba.conf, poner todos los valores en trust. Se debe hacer restart de postgres
 
-* Services (job queues, cache servers, search engines, etc.)
+Bundle:
 
-* Deployment instructions
+```
+gem install bundle
+bundle install
+```
 
-* ...
+Create the database:
+```
+rails db:create
+rails db:migrate
+```
+To populate the database with the users and songs of the AWS repo:
+
+```
+rails db:seed
+```
+Turn on the local server:
+
+```
+rails s
+```
+
