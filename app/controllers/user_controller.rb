@@ -3,7 +3,7 @@ class UserController < ApplicationController
 
   def show
     @go = true
-    if @current_user.songs.where(compleated: false).count == 0
+    if @current_user.songs.where(completed: false).count == 0
       @email = "You have already responded the survey"
       @go = false
     else
