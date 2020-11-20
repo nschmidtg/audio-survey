@@ -1,7 +1,7 @@
-<% ratio =  @compleated.to_f/@total*100 %>
+<% ratio =  @completed.to_f/@total*100 %>
 
 <div class="progress">
-  <div class="progress-bar" role="progressbar" style="width: <%=ratio%>%;" aria-valuenow="<%=ratio%>" aria-valuemin="0" aria-valuemax="100"><%= @compleated %> / <%= @total %></div>
+  <div class="progress-bar" role="progressbar" style="width: <%=ratio%>%;" aria-valuenow="<%=ratio%>" aria-valuemin="0" aria-valuemax="100"><%= @completed %> / <%= @total %></div>
 </div>
 <audio src=<%= @song.url %> controls></audio>
 
