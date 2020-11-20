@@ -1,0 +1,23 @@
+@import "materialize";
+@import "https://fonts.googleapis.com/icon?family=Material+Icons";
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Roboto:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+$roboto:'Roboto', sans-serif;
+$open-sans:'Open Sans', sans-serif;
+$primary-color: #333;
+
+body {
+  font-family: $open-sans;
+  font-weight: 400;
+}
+div.container{
+  color: $primary-color;
+  /*text-align: center;*/
+  border-radius: 1em;
+  padding: 0em;
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%)
+}
