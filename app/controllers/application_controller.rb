@@ -8,7 +8,7 @@ class ApplicationController < ActionController::Base
         I18n.default_locale
   end
   def extract_locale
-    locales = request.env['HTTP_ACCEPT_LANGUAGE'] || ""
+    locales = request.env['HTTP_ACCEPT_LANGUAGE'].to_s
     locales.scan(/[a-z]{2}(?=;)/).find do |locale|
       I18n.available_locales.include?(locale.to_sym)
     end
