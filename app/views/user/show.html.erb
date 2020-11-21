@@ -1,5 +1,5 @@
 <%= @email %>
 <% if @go %>
-    <%= I18n.t(:welcome_text)%><br>
+    <%= t(:welcome_text)%><br>
     <%= link_to(t(:start_survey),start_survey_path)%>
 <% end %>
