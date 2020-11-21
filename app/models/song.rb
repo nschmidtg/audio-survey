@@ -1,7 +1,8 @@
 class Song < ApplicationRecord
     belongs_to :user
 
-    enum rating_strings: [ 'strong'.to_sym, 'somewhat'.to_sym, 'no association'.to_sym ]
+    enum rating_strings: [ I18n.t(:yes_label).to_sym, I18n.t(:somewhat_label).to_sym, I18n.t(:no_label).to_sym ], _prefix: true
+    enum yes_no_strings: [ I18n.t(:yes_label).to_sym, I18n.t(:no_label).to_sym], _prefix: true
 
     validates :recognized, inclusion: { in: [ true, false ] }
     validates :rating, presence: true

@@ -30,4 +30,17 @@
 # available at https://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
+  welcome_text: "This survey is the second part of our study about music and memories in the context of music perception and congnition. The survey consists of 10 song excerpts and some questions regarding these and your memories. Thank you in advance!"
+  start_survey: "Start survey"
+  listen_label: "Please listen to this song excerpt and then answer the questions below."
+  recognized_label: "Did you recognize the song?"
+  recognize_text_label: "If so, was it part of the music you used to enjoy listening to as a teenager?"
+  rating_label: "Did this song bring personal memories back from your teenage years? To what extent?"
+  yes_label: "Yes"
+  somewhat_label: "Somewhat"
+  yes_label: "Yes"
+  no_label: "No"
+  memory_description_label: "If it did, please take your time and describe those memories here:"
+  additional_label: "If there is anything else you would like to mention about this song or your memories, please write it here:"
+  next_label: "NEXT"
+  thanks_text: "Thank you very much for your participation!"

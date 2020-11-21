@@ -3,18 +3,18 @@
 <div class="progress">
   <div class="progress-bar" role="progressbar" style="width: <%=ratio%>%;" aria-valuenow="<%=ratio%>" aria-valuemin="0" aria-valuemax="100"><%= @completed %> / <%= @total %></div>
 </div>
+<%= t(:listen_label) %><br>
 <audio src=<%= @song.url %> controls></audio>
 
 <%= simple_form_for @song, url: song_path do |f| %>
   <%= f.error_notification %>
 
-  <%= f.input :recognized, as: :radio_buttons %>
-  <%= f.input :recognize_text, as: :text %>
-  <%= f.input :rating, as: :radio_buttons, collection: Song::rating_strings %>
-  <%= f.input :memory_description, as: :text %>
-  <%= f.input :additional_description, as: :text %>
-  
+  <%= f.input :recognized, as: :radio_buttons, collection: Song::yes_no_strings, label: t(:recognized_label)  %>
+  <%= f.input :recognize_text, as: :text, label: t(:recognize_text_label)  %>
+  <%= f.input :rating, as: :radio_buttons, collection: Song::rating_strings, label: t(:rating_label)  %>
+  <%= f.input :memory_description, as: :text, label: t(:memory_description_label)  %>
+  <%= f.input :additional_description, as: :text, label: t(:additional_label) %>
 
-  <%= f.button :submit, class: "btn-primary" %>
-  <%= f.button :button, "Cancel", type: "reset", class: "btn-outline-secondary" %>
+
+  <%= f.button :submit, t(:next_label), class: "btn-primary" %>
 <% end %>
