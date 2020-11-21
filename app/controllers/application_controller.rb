@@ -1,6 +1,6 @@
 class ApplicationController < ActionController::Base
   before_action :set_locale
-  before action :default_url_options
+
   private
   def set_locale
     locale = extract_locale
