@@ -1,6 +1,6 @@
 class UserController < ApplicationController
-  before_action :authenticate
   before_action :set_locale
+  before_action :authenticate
 
   def show
     @go = true
