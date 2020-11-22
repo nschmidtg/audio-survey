@@ -5,7 +5,13 @@ class ApplicationController < ActionController::Base
     I18n.locale = params[:lang] || locale_from_header || I18n.default_locale
   end
   def locale_from_header
-    request.env.fetch('HTTP_ACCEPT_LANGUAGE', '').scan(/[a-z]{2}/).first
+    header_locale = request.env.fetch('HTTP_ACCEPT_LANGUAGE', '').scan(/[a-z]{2}/).first
+    if header_locale == "ca" || header_locale == "gl" || header_locale == "eu"
+      "es"
+    else
+      header_locale
+    end
+
   end
 
 
