@@ -9,7 +9,7 @@
 <%= simple_form_for @song, url: song_path do |f| %>
   <%= f.error_notification %>
 
-  <%= f.input :recognized, as: :radio_buttons, collection: Song::yes_no_strings, label: t(:recognized_label)  %>
+  <%= f.input :recognized, as: :radio_buttons, label: t(:recognized_label)  %>
   <%= f.input :recognize_text, as: :text, label: t(:recognize_text_label)  %>
   <%= f.input :rating, as: :radio_buttons, collection: Song::rating_strings, label: t(:rating_label)  %>
   <%= f.input :memory_description, as: :text, label: t(:memory_description_label)  %>
