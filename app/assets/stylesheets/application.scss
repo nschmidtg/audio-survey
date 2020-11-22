@@ -23,6 +23,7 @@ div.container{
 
 div.centered-container{
   text-align: center;
+  padding-bottom: 2%;
 }
 
 .progress {
@@ -35,4 +36,12 @@ div.centered-container{
 }
 strong, b {
   font-weight: bold;
+}
+
+@media (max-height: 850px) {
+
+  body {
+        background: white;
+   }
+
 }
