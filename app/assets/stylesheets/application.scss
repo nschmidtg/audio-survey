@@ -17,4 +17,22 @@ body {
 div.container{
   color: $primary-color;
   background-color: white;
+  padding-left: 2%;
+  padding-right: 2%;
+}
+
+div.centered-container{
+  text-align: center;
+}
+
+.progress {
+  position: relative;
+}
+
+.bar {
+  z-index: 1;
+  position: absolute;
+}
+strong, b {
+  font-weight: bold;
 }

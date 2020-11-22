@@ -1,5 +1,6 @@
 es:
-  welcome_text: "Esta encuesta es la segunda parte de nuestro estudio sobre la música y la memoria en el contexto de percepción y cognición musical. La encuesta tiene 10 partes, en cada una de las cuales escuchará un fragmento de canción y responderá unas preguntas sobre la misma y sus recuerdos. ¡Muchas gracias de antemano!"
+  hello_html: "¡Hola, <b>%{email}</b>!"
+  welcome_text_html: "Esta encuesta es la segunda parte de nuestro estudio sobre la música y la memoria en el contexto de percepción y cognición musical. La encuesta tiene 10 partes, en cada una de las cuales escuchará un fragmento de canción y responderá unas preguntas sobre la misma y sus recuerdos.<br>¡<b>Muchas gracias</b> de antemano!"
   start_survey: "Empezar encuesta"
   listen_label: "Por favor, escuche este fragmento de canción y después responda a las preguntas que se plantean más abajo."
   recognized_label: "¿Conoce la canción?"
