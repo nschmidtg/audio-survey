@@ -16,9 +16,11 @@ module Survey
     # the framework and any gems in your application.
 
     config.i18n.available_locales = [:en, :es, :da, :ca, :eu]
-    # config.i18n.default_locale = :en
-    config.i18n.fallbacks = [:en]
+    
+    # config.i18n.fallbacks = [:en]
     config.i18n.fallbacks = {:da => [:en], :ca => [:es], :eu => [:es]}
+
+    config.i18n.default_locale = :en
     #config.i18n.fallbacks = true
   end
 end
