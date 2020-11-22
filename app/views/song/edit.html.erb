@@ -3,17 +3,20 @@
 <div class="progress">
   <div class="progress-bar" role="progressbar" style="width: <%=ratio%>%;" aria-valuenow="<%=ratio%>" aria-valuemin="0" aria-valuemax="100"><%= @completed %> / <%= @total %></div>
 </div>
-<%= t(:listen_label) %><br>
+<p><%= t(:listen_label) %></p>
 <audio src=<%= @song.url %> controls></audio>
 
 <%= simple_form_for @song, url: song_path do |f| %>
   <%= f.error_notification %>
-
-  <%= f.input :recognized, as: :radio_buttons, label: t(:recognized_label)  %>
-  <%= f.input :recognize_text, as: :text, label: t(:recognize_text_label)  %>
-  <%= f.input :rating, as: :radio_buttons, collection: Song::rating_strings, label: t(:rating_label)  %>
-  <%= f.input :memory_description, as: :text, label: t(:memory_description_label)  %>
-  <%= f.input :additional_description, as: :text, label: t(:additional_label) %>
+  <%= f.input :recognized, as: :radio_buttons, label: t(:recognized_label), id:'inputrecognized'  %>
+  <p><%= t(:recognize_text_label) %> </p>
+  <%= f.input :recognize_text, as: :text, label: false  %>
+  <p><%= t(:rating_label) %> </p>
+  <%= f.input :rating, as: :radio_buttons, collection: Song::rating_strings, label: false  %>
+  <p><%= t(:memory_description_label) %> </p>
+  <%= f.input :memory_description, as: :text, label: false  %>
+  <p><%= t(:additional_label) %> </p>
+  <%= f.input :additional_description, as: :text, label: false %>
 
 
   <%= f.button :submit, t(:next_label), class: "btn-primary" %>
