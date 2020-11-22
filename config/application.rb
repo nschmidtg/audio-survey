@@ -20,7 +20,7 @@ module Survey
     # config.i18n.fallbacks = [:en]
     #config.i18n.fallbacks = [{:da => [:en], :ca => [:es], :eu => [:es]}, :en]
 
-    config.i18n.default_locale = :en
+    #config.i18n.default_locale = :en
     #config.i18n.fallbacks = true
   end
 end
