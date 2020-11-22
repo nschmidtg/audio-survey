@@ -12,3 +12,4 @@ es:
   additional_label: "Si hay algo más que le gustaría añadir sobre sus recuerdos o la canción escribalo aquí:"
   next_label: "SIGUIENTE"
   thanks_text: "¡Muchísimas gracias por su participación!"
+  already_answered_label: "Ya ha respondido a esta encuesta. ¡Muchísimas gracias por su participación!"
