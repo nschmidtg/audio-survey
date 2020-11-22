@@ -11,7 +11,7 @@
   <%= f.input :recognized, as: :radio_buttons, label: t(:recognized_label), id:'inputrecognized'  %>
   <p><%= t(:recognize_text_label) %> </p>
   <%= f.input :recognize_text, as: :text, label: false  %>
-  <%= f.input :rating, as: :radio_buttons, collection: [t(:yes_label), t(:somewhat_label), t(:no_label)], label: t(:rating_label)  %>
+  <%= f.input :rating, as: :radio_buttons, collection: {t(:yes_label) => 0, t(:somewhat_label) => 1, t(:no_label)=> 2}, label: t(:rating_label)  %>
   <p><%= t(:memory_description_label) %> </p>
   <%= f.input :memory_description, as: :text, label: false  %>
   <p><%= t(:additional_label) %> </p>

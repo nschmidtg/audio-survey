@@ -47,3 +47,4 @@ en:
   thanks_text: "Thank you very much for your participation!"
   already_answered_label: "You already answered this survey. Thank you very much for your participation!"
   nav_label: "Music and memories survey"
+  generator: "Generate user"
