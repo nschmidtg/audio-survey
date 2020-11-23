@@ -1,4 +1,7 @@
 class StaticController < ApplicationController
+  def finish
+    session[:current_user_token] = nil
+  end
   def generate_user
     u = User.last.dup
     u.generate_token!
