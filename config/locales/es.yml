@@ -16,3 +16,4 @@ es:
   already_answered_label: "Ya ha respondido a esta encuesta. ¡Muchísimas gracias por su participación!"
   nav_label: "Encuesta sobre música y memoria"
   generator: "Generar usuario"
+  error: "Acción no permitida"

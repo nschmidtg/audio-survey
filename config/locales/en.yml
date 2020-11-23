@@ -48,3 +48,4 @@ en:
   already_answered_label: "You already answered this survey. Thank you very much for your participation!"
   nav_label: "Music and memories survey"
   generator: "Generate user"
+  error: "Action not allowed"

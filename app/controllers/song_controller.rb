@@ -32,9 +32,14 @@ class SongController < ApplicationController
   private
 
   def find_song
-    @song = Song.find(params[:id])
-    @total = @song.user.songs.count
-    @completed = @song.user.songs.where(completed: true).count
+    @song = @current_user.songs.where(id: params[:id]).first
+    if @song
+      @total = @song.user.songs.count
+      @completed = @song.user.songs.where(completed: true).count
+    else
+      flash[:error] = t(:error)
+      redirect_to root_path
+    end
   end
 
   def params_song
@@ -50,7 +55,8 @@ class SongController < ApplicationController
   def authenticate
     @current_user = User.find_by(token: session[:current_user_token])
     unless @current_user
-      raise ActiveRecord::RecordNotFound
+      flash[:error] = "Acción no permitida"
+      redirect_to root_path
     end
   end
 end

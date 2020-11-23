@@ -27,6 +27,11 @@
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
   <body>
+    <% flash.each do |type, msg| %>
+      <div class="alert alert-info">
+        <%= msg %>
+      </div>
+    <% end %>
     <div class="container bg-primary">
       <nav class="navbar navbar-dark bg-primary">
         <span class="navbar-brand mb-0 h1"><%= t(:nav_label) %></span>
