@@ -48,3 +48,4 @@ en:
   already_answered_label: "You already answered this survey. Thank you very much for your participation!"
   nav_label: "Music and memories survey"
   generator: "Generate user"
+  not_logged: "Thanks for answering our survey. You need a custom link in order to answer the survey. Please ask to one of our team members the custom link. Thanks"
