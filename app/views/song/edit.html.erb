@@ -8,12 +8,12 @@
 
 <%= simple_form_for @song, url: song_path do |f| %>
   <%= f.error_notification %>
-  <%= f.input :recognized, as: :radio_buttons, label: t(:recognized_label), id:'inputrecognized'  %>
+  <%= f.input :recognized, as: :radio_buttons, label: t(:recognized_label), id:'inputrecognized', error:t(:mark_err)  %>
   <p><%= t(:recognize_text_label) %> </p>
-  <%= f.input :recognize_text, as: :text, label: false  %>
-  <%= f.input :rating, as: :radio_buttons, collection: {t(:yes_label) => 0, t(:somewhat_label) => 1, t(:no_label)=> 2}, label: t(:rating_label)  %>
+  <%= f.input :recognize_text, as: :text, label: false, error:t(:recognize_text_err)  %>
+  <%= f.input :rating, as: :radio_buttons, collection: {t(:yes_label) => 0, t(:somewhat_label) => 1, t(:no_label)=> 2}, label: t(:rating_label), error:t(:mark_err)  %>
   <p><%= t(:memory_description_label) %> </p>
-  <%= f.input :memory_description, as: :text, label: false  %>
+  <%= f.input :memory_description, as: :text, label: false, error:t(:memory_description_err)  %>
   <p><%= t(:additional_label) %> </p>
   <%= f.input :additional_description, as: :text, label: false %>
 

@@ -48,3 +48,6 @@ en:
   already_answered_label: "You already answered this survey. Thank you very much for your participation!"
   nav_label: "Music and memories survey"
   generator: "Generate user"
+  mark_err: "Please mark your answer"
+  recognize_text_err: "If you answered yes to the previous question, please answer this one"
+  memory_description_err: "If you answered yes or somewhat to the previous question, please elaborate"
