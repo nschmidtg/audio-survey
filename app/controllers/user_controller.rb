@@ -3,8 +3,8 @@ class UserController < ApplicationController
 
   def show
     @go = true
-    if @current_user.songs.where(compleated: false).count == 0
-      @email = "You have already responded the survey"
+    if @current_user.songs.where(completed: false).count == 0
+      @email = I18n.t(:already_answered_label)
       @go = false
     else
       @email = @current_user.email

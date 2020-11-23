@@ -25,7 +25,7 @@ ActiveRecord::Schema.define(version: 2020_11_18_141824) do
     t.string "additional_description"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.boolean "compleated", default: false
+    t.boolean "completed", default: false
   end
 
   create_table "users", force: :cascade do |t|

@@ -1,0 +1,47 @@
+@import url('//fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Roboto:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+$roboto:'Roboto', sans-serif;
+$open-sans:'Open Sans', sans-serif;
+$primary-color: #333;
+
+html {
+  height: 100%;
+}
+body {
+  font-family: $open-sans;
+  font-weight: 400;
+  background-color: #c5cae9;
+  height:100%;
+}
+
+div.container{
+  color: $primary-color;
+  background-color: white;
+  padding-left: 2%;
+  padding-right: 2%;
+}
+
+div.centered-container{
+  text-align: center;
+  padding-bottom: 2%;
+}
+
+.progress {
+  position: relative;
+}
+
+.bar {
+  z-index: 1;
+  position: absolute;
+}
+strong, b {
+  font-weight: bold;
+}
+
+@media (max-height: 850px) {
+
+  body {
+        background: white;
+   }
+
+}

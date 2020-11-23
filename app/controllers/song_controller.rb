@@ -3,7 +3,7 @@ class SongController < ApplicationController
   before_action :find_song, only: [:edit, :update]
 
   def start_survey
-    next_song = @current_user.songs.where(compleated: false).first
+    next_song = @current_user.songs.where(completed: false).first
     if next_song
       redirect_to edit_song_path(next_song.id)
     else
@@ -16,9 +16,9 @@ class SongController < ApplicationController
 
   def update
     if @song.update_attributes(params_song)
-      @song.update_attribute(:compleated, true)
+      @song.update_attribute(:completed, true)
       flash[:notice] = 'Imagen acutalizada'
-      next_song = @song.user.songs.where(compleated: false).first
+      next_song = @song.user.songs.where(completed: false).first
       if next_song
         redirect_to edit_song_path(next_song.id)
       else
@@ -34,7 +34,7 @@ class SongController < ApplicationController
   def find_song
     @song = Song.find(params[:id])
     @total = @song.user.songs.count
-    @compleated = @song.user.songs.where(compleated: true).count
+    @completed = @song.user.songs.where(completed: true).count
   end
 
   def params_song

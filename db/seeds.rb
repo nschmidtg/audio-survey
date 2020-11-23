@@ -22,7 +22,7 @@ c.list_objects_v2(bucket: 'audio-survey').contents.select{ |x| x.size > 0}.each 
   users << u
   s = Song.new()
   s.url = "https://audio-survey.s3.eu-west-3.amazonaws.com/#{x.key}"
-  s.compleated = false
+  s.completed = false
   s.user = u
   s.save(validate: false)
   songs_count += 1
