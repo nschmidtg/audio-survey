@@ -16,5 +16,8 @@ es:
   already_answered_label: "Ya ha respondido a esta encuesta. ¡Muchísimas gracias por su participación!"
   nav_label: "Encuesta sobre música y memoria"
   generator: "Generar usuario"
+  mark_err: "Por favor marque su respuesta"
+  recognize_text_err: "Si respondió sí a la pregunta anterior, por favor responda esta"
+  memory_description_err: "Si respondió sí o ligeramente a la pregunta anterior, por favor elabore su respuesta"
   error: "Acción no permitida"
   not_logged: "Gracias por querer responder la encuesta. La encuesta debe ser respondida meduante un link customizado. Por favor pídale a uno de los miembros de nuestro equipo su link customizado"
