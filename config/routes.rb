@@ -4,11 +4,11 @@ Rails.application.routes.draw do
     get  'users'       => :show
   end
   get '/finish' => 'static#finish'
-  get 'generate_user'=> 'static#generate_user'
+  # get 'generate_user'=> 'static#generate_user'
   get 'index'=> 'static#index'
   get 'start_survey' => 'song#start_survey'
 
   root 'static#index'
 
-  resources :song, only: [:edit,:update]
+  resources :song, only: [:edit,:update,:show]
 end
