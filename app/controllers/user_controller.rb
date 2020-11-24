@@ -17,7 +17,8 @@ class UserController < ApplicationController
     session[:current_user_token] = nil
     @current_user = User.find_by(token: params[:token])
     unless @current_user
-      raise ActiveRecord::RecordNotFound
+      flash[:error] = t(:error)
+      redirect_to root_path
     end
     session[:current_user_token] ||= @current_user.token
   end

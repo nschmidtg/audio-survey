@@ -10,5 +10,5 @@ Rails.application.routes.draw do
 
   root 'static#index'
 
-  resources :song, only: [:edit,:update]
+  resources :song, only: [:edit,:update,:show]
 end
