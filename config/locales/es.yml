@@ -17,3 +17,4 @@ es:
   nav_label: "Encuesta sobre música y memoria"
   generator: "Generar usuario"
   error: "Acción no permitida"
+  not_logged: "Gracias por querer responder la encuesta. La encuesta debe ser respondida meduante un link customizado. Por favor pídale a uno de los miembros de nuestro equipo su link customizado"

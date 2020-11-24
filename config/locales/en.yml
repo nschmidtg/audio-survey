@@ -49,3 +49,4 @@ en:
   nav_label: "Music and memories survey"
   generator: "Generate user"
   error: "Action not allowed"
+  not_logged: "Thanks for answering our survey. You need a custom link in order to answer the survey. Please ask to one of our team members the custom link. Thanks"
